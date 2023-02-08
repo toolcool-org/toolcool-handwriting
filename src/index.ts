@@ -1,12 +1,9 @@
-import TCEncoder from './encoder';
-import TCDecoder from './decoder';
+import handwriting from './handwriting';
 
 declare global {
     interface Window {
-        TCEncoder: typeof TCEncoder;
-        TCDecoder: typeof TCDecoder;
+        handwriting: typeof handwriting;
     }
 }
 
-window.TCEncoder = TCEncoder;
-window.TCDecoder = TCDecoder;
+window.handwriting = handwriting;

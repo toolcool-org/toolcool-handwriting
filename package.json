@@ -13,9 +13,7 @@
     "eslint": "eslint ./src/**",
     "typescript-declarations": "tsc --emitDeclarationOnly"
   },
-  "keywords": [
-
-  ],
+  "keywords": [],
   "author": "Tool Cool <toolcool.org@gmail.com>",
   "license": "MIT",
   "browserslist": [
@@ -37,5 +35,8 @@
     "jest": "^29.3.1",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.2.0"
   }
 }
