@@ -10,8 +10,12 @@
   <script src="../dist/toolcool-handwriting.min.js"></script>
   <script>
 
-    const test = handwriting();
-    console.log(test);
+    const init = async () => {
+      const test = await handwriting();
+      console.log(test);
+    };
+
+    init();
   </script>
 </body>
 </html>
