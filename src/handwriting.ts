@@ -52,6 +52,30 @@ const predict = (val: number, linearModel: tf.Sequential) => {
 const handwriting = async () => {
     const model = await trainModel();
     return predict(4, model);
+
+    /*
+    // https://www.tensorflow.org/js/guide/save_load
+    // return await tf.loadModel('./assets/model.json');
+    const model = await tf.loadLayersModel('./assets/model.json')
+
+    await tf.tidy(() => {
+
+        const imageData: ImageData = null; // load image data from canvas
+
+        // Convert the canvas pixels to a Tensor of the matching shape
+        let img = tf.browser.fromPixels(imageData, 1);
+        img = img.reshape([1, 28, 28, 1]);
+        img = tf.cast(img, 'float32');
+
+        // Make and format the predications
+        const output = model.predict(img) as tf.Tensor;
+
+        // Save predictions on the component
+        const predictions = Array.from(output.dataSync());
+        console.log('predictions', predictions);
+    });
+
+    return 1;*/
 };
 
 export default handwriting;
