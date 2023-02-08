@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tool Cool String Compression</title>
+</head>
+<body>
+  <h1>Tool Cool String Compression</h1>
+  <script src="../dist/toolcool-string-compress.min.js"></script>
+  <script>
+    //const string = `abbbbbbbcabbbbbbb`;
+    //const encoded = TCEncoder(string);
+    //console.log(encoded);
+
+    const encoded = `I AM SAM. <10,10>SAM I AM.
+THAT SAM-I-AM! <15,14>`;
+    const decoded = TCDecoder(encoded);
+    console.log(decoded);
+  </script>
+</body>
+</html>
